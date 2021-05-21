@@ -18,11 +18,11 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
 
             try
             {
-                //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
+                
                 string query = "INSERT INTO locations (buildingName, roomName, roomType,capacity) VALUES (@buildingname, @roomname, @roomtype,@capacity)";
 
                 conn.Open();
@@ -34,7 +34,7 @@ namespace Time_Table_Management_System.Services
                 cmd.Parameters.AddWithValue("@capacity", location.Capacity);
                 cmd.Prepare();
 
-                //Console.WriteLine(cmd);
+                
 
                 if (cmd.ExecuteNonQuery() == 1)
                     result = true;
@@ -59,7 +59,7 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             try
             {
                 string query = "DELETE FROM locations WHERE id = @id";
@@ -92,7 +92,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             List<Location> arrayLocs = null;
 
 
@@ -134,7 +134,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             Location loc = new Location();
 
             try
@@ -170,7 +170,7 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             try
             {
                 string query = "UPDATE locations SET buildingName = @buildingname, roomName = @roomname, roomType = @roomtype, capacity = @capacity WHERE id = @id";
