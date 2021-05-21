@@ -1,0 +1,8 @@
+.vs/*
+.vs/TimeTable-System/
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+Time\ Table\ Management\ System/bin/Debug/Time\ Table\ Management\ System.exe
+Time\ Table\ Management\ System/obj/Debug/*
+Time\ Table\ Management\ System/bin/Debug/Time\ Table\ Management\ System.pdb
+.vs/Time\ Table\ Management\ System/v16/.suo
