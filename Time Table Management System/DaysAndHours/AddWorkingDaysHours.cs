@@ -162,8 +162,7 @@ namespace Time_Table_Management_System.DaysAndHours
                 //Insert Data
                 if (workingDaysHoursService.addWorkingDaysHours(workingDaysHours))
                 {
-                    //SuccessMessage sc = new SuccessMessage("Working Days And Hours Added Successfully !");
-                    //sc.Show();
+                    
                     MessageBox.Show("Working Days And Hours Added Successfully !");
                     getData();
                     btnUpdate.Visible = true;
@@ -173,9 +172,8 @@ namespace Time_Table_Management_System.DaysAndHours
                 }
                 else
                 {
-                    //ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
-                    //ec.Show();
-                    MessageBox.Show("Oops, Somthing went wrong!");
+                    
+                    MessageBox.Show("Oops, Somthing went wrong! You Should Have Active Internet Connection to Run This!!!");
                 }
             }
         }
@@ -420,8 +418,7 @@ namespace Time_Table_Management_System.DaysAndHours
             workingDaysHoursService = new WorkingDaysHoursService();
             if (workingDaysHoursService.deleteWorkingDaysHours())
             {
-                //SuccessMessage sm = new SuccessMessage("All Data Related to Working Days / Hours Deleted!");
-                //sm.Show();
+                
                 MessageBox.Show("All Data Related to Working Days / Hours Deleted!");
                 btnUpdate.Visible = false;
                 btnDelete.Visible = false;
@@ -431,8 +428,7 @@ namespace Time_Table_Management_System.DaysAndHours
             }
             else
             {
-                //ErrorMessage em = new ErrorMessage("Ooops...Something went wrong");
-                //em.Show();
+                
                 MessageBox.Show("Ooops...Something went wrong");
             }
         }
@@ -519,15 +515,13 @@ namespace Time_Table_Management_System.DaysAndHours
                 {
                     if (workingDaysHoursService.addWorkingDaysHours(workingDaysHoursUpdate))
                     {
-                        //SuccessMessage sm = new SuccessMessage("Working Days / Hours Updated Succesfully!");
-                        //sm.Show();
+                      
                         MessageBox.Show("Working Days / Hours Updated Succesfully!");
                     } 
                 }
                 else
                 {
-                    //ErrorMessage em = new ErrorMessage("Ooops...Something went wrong");
-                    //em.Show();
+                    
                     MessageBox.Show("Ooops...Something went wrong");
                 }
             }
