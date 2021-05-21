@@ -17,12 +17,10 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-
+           
             try
             {
-                //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
-                string query = "INSERT INTO locationunavailable (room, day, start_time,end_time) VALUES (@room, @day, @start_time,@end_time)";
+                 string query = "INSERT INTO locationunavailable (room, day, start_time,end_time) VALUES (@room, @day, @start_time,@end_time)";
 
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -32,8 +30,6 @@ namespace Time_Table_Management_System.Services
                 cmd.Parameters.AddWithValue("@start_time", unavailable.Start_time);
                 cmd.Parameters.AddWithValue("@end_time", unavailable.End_time);
                 cmd.Prepare();
-
-                //Console.WriteLine(cmd);
 
                 if (cmd.ExecuteNonQuery() == 1)
                     result = true;
@@ -58,8 +54,7 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            try
+             try
             {
                 string query = "DELETE FROM locationunavailable WHERE id = @id";
 
