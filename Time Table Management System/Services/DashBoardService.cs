@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +15,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             int labCount = 0;
             try
             {
@@ -44,7 +43,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+          
             string latestGroup = null;
             try
             {
@@ -72,7 +71,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             string latestLecturer = null;
             try
             {
@@ -100,7 +99,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+           
             string latestSubject = null;
             try
             {
@@ -128,7 +127,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+           
             int lacCount = 0;
             try
             {
@@ -156,7 +155,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+          
             int lecturersCount = 0;
             try
             {
@@ -184,7 +183,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+           
             int locationsCount = 0;
             try
             {
@@ -212,7 +211,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+          
             int studentsCount = 0;
             try
             {
@@ -240,7 +239,7 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+           
             int subjectsCount = 0;
             try
             {

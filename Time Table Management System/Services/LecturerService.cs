@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
-using System.Data.SQLite;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -20,7 +19,7 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            
             try
             {
                 string query = "INSERT INTO lecturers (lec_name, employee_id, faculty, department, center, building, level, rank) VALUES (@lecname, @employeeid, @faculty, @department, @center, @building, @level, @rank)";
@@ -62,7 +61,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "DELETE FROM lecturers WHERE id = @id";
@@ -94,7 +92,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<Lecturer> arrayLecs = null;
             
 
@@ -139,7 +136,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             Lecturer lec = new Lecturer();
 
             try
@@ -180,7 +176,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "UPDATE lecturers SET lec_name = @lecname, employee_id = @employeeid, faculty = @faculty, department = @department, center = @center, building = @building, level = @level, rank = @rank WHERE id = @id";

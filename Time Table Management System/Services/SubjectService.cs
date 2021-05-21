@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
-using System.Data.SQLite;
 using System.Data;
 using MySql.Data.MySqlClient;
 
@@ -19,10 +18,8 @@ namespace Time_Table_Management_System.Services
             Boolean result =false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
                 string query = "INSERT INTO subjects (subjectName, subjectCode, offeredYear, offeredSem, LecHours, TuteHours, LabHours, EvaluationHours) VALUES (@subname, @subcode, @offeredyear, @offeredSem, @lechours, @tutehours, @labhours, @evaluationhours)";
                 
                 conn.Open();
@@ -39,25 +36,13 @@ namespace Time_Table_Management_System.Services
 
                 cmd.Prepare();
 
-                //Console.WriteLine(cmd);
 
                 if (cmd.ExecuteNonQuery() == 1)
                     result = true;
                 else
                     result = false;
 
-                //SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(cmd);
-                //DataTable dataTable = new DataTable();
-                //dataAdapter.Fill(dataTable);
-
-                //if (dataTable.Rows.Count > 0)
-                //{
-                // MessageBox.Show("You are Logged in", "Login Successfull");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Login Failed", "Error");
-                //}
+                
             }
             catch (Exception e)
             {
@@ -77,7 +62,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "DELETE FROM subjects WHERE id = @id";
@@ -109,7 +93,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<Subject> arraySubs = null;
 
 
@@ -154,7 +137,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             Subject sub = new Subject();
 
             try
@@ -195,7 +177,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "UPDATE subjects SET subjectName = @subname, subjectCode = @subcode, offeredYear = @offeredyear, offeredSem = @offeredSem, LecHours = @lechours, TuteHours = @tutehours, LabHours = @labhours, EvaluationHours = @evaluationhours WHERE id = @id";
