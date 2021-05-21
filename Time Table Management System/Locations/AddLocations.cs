@@ -81,15 +81,12 @@ namespace Time_Table_Management_System.Locations
                 //Insert Data
                 if (locationService.addLocation(location))
                 {
-                    //MessageBox.Show(tag.Tag);
-                    //SuccessMessage sc = new SuccessMessage("Locations Added Successfully !");
-                    //sc.Show();
+                    
                     MessageBox.Show("Locations Added Successfully !");
                 }
                 else
                 {
-                    //ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
-                    //ec.Show();
+                    
                     MessageBox.Show("Oops, Somthing went wrong!");
                 }
             }

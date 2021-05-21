@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
-using System.Data.SQLite;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;

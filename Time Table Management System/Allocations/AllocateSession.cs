@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Time_Table_Management_System.Allocations;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
-using System.Data.SQLite;
 using Time_Table_Management_System.Messages;
 using MySql.Data.MySqlClient;
 
@@ -23,7 +22,7 @@ namespace Time_Table_Management_System.Allocations
         Boolean result = false;
         
 
-        //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+        
         
 
         private SessionDTO selectedSession = null;
