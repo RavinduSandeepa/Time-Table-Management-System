@@ -17,7 +17,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "INSERT INTO sessions (lecturer1_name, lecturer2_name, subject_code, subject_name, tag, group_code, student_count, duration) VALUES (@lec1_name, @lec2_name, @sub_code, @sub_name, @tag, @group_code, @student_count, @duration)";
@@ -59,7 +58,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "DELETE FROM sessions WHERE id = @id";
@@ -91,7 +89,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<SessionDTO> arraySessions = null;
 
 
@@ -158,7 +155,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             SessionDTO session = new SessionDTO();
 
             try
@@ -208,7 +204,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<SessionDTO> arraySessions = null;
 
             try
@@ -304,7 +299,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "UPDATE sessions SET lecturer1_name = @lecname1, lecturer2_name = @lecname2, subject_code = @subject_code, subject_name = @subject_name, tag = @tag, group_code = @group_code, student_count = @student_count, duration = @duration WHERE id = @id";

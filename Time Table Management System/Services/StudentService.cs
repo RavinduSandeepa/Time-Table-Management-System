@@ -20,10 +20,8 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
                 string query = "INSERT INTO students (academicYear, programme, groupNumber, subGroupNumber, groupId, subGroupId) VALUES (@academicyear, @programme, @groupno, @subgroupno, @groupid, @subgroupid)";
 
                 conn.Open();
@@ -64,7 +62,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "DELETE FROM students WHERE id = @id";
@@ -96,7 +93,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<Student> arrayStus = null;
 
 
@@ -139,7 +135,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-          //  SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             Student stu = new Student();
 
             try
@@ -178,7 +173,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "UPDATE students SET academicYear = @academicyear, programme = @programme, groupNumber = @groupno, subGroupNumber = @subgroupno, groupId = @groupid, subGroupId = @subgroupid WHERE id = @id";

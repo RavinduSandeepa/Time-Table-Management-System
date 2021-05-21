@@ -17,7 +17,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
 
@@ -54,7 +53,6 @@ namespace Time_Table_Management_System.Services
             Boolean result = false;
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 string query = "DELETE FROM parallels WHERE id = @id";
@@ -86,7 +84,6 @@ namespace Time_Table_Management_System.Services
         {
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
-           // SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<ParalleDTO> arrayParallels = null;
 
             try
@@ -138,7 +135,6 @@ namespace Time_Table_Management_System.Services
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
 
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             ParalleDTO paralleDTO = new ParalleDTO();
 
             try
@@ -185,7 +181,6 @@ namespace Time_Table_Management_System.Services
             string connectionString = @"Server=us-cdbr-east-03.cleardb.com;Database=heroku_9513ba349fe86de;Uid=bf862fa75e1087;Pwd=92fff314;";
             MySqlConnection conn = new MySqlConnection(connectionString);
 
-            //SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<ParalleDTO> arrayParallels = null;
 
             try
